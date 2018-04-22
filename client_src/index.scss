@@ -1,0 +1,34 @@
+$bgColorLight:#367cd6;
+$bgColorDark:#183968;
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: $bgColorDark;
+  background: -moz-linear-gradient(top, $bgColorLight 0%,$bgColorDark 100%);
+  background: -webkit-linear-gradient(top, $bgColorLight 0%,$bgColorDark 100%);
+  background: linear-gradient(to bottom, $bgColorLight 0%,$bgColorDark 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bgColorLight', endColorstr='$bgColorDark',GradientType=0 ); 
+}
+
+body {
+  margin: 0;
+  padding: 40px 5%; 
+  padding: 5vh 5vw;
+  font-family: 'Open Sans', sans-serif;  
+  font-size: 14px; 
+  height:100%;
+  color:#fff;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+
+
+

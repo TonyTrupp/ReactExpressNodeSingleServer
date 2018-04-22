@@ -1,47 +1,37 @@
-.AppWrap{ 
-    position: relative;
-    margin:auto;
-    width:970px; 
-    max-width:100%; 
-  } 
-  
-  .App {
-    text-align: center; 
-    background:#4A90E2;  
-    border-radius:10px;
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    -khtml-border-radius:10px; 
-    box-shadow: 0 3px 20px rgba(0,0,0,.3);
-  } 
-  html {
+html {
   height: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: #367cd6;
+  background: #183968;
   background: -moz-linear-gradient(top, #367cd6 0%, #183968 100%);
-  background: -webkit-linear-gradient(top, #367cd6 0%,#183968 100%);
-  background: linear-gradient(to bottom, #367cd6 0%,#183968 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#367cd6', endColorstr='#183968',GradientType=0 ); 
-}
+  background: -webkit-linear-gradient(top, #367cd6 0%, #183968 100%);
+  background: linear-gradient(to bottom, #367cd6 0%, #183968 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$bgColorLight', endColorstr='$bgColorDark',GradientType=0 ); }
 
 body {
   margin: 0;
-  padding: 40px 5%; 
+  padding: 40px 5%;
   padding: 5vh 5vw;
-  font-family: 'Open Sans', sans-serif;  
-  font-size: 14px; 
-  height:100%;
-  color:#fff;
-}
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  height: 100%;
+  color: #fff; }
 
 a {
-  color: #00B7FF;
-}
+  color: #00B7FF; }
+.AppWrap {
+  position: relative;
+  margin: auto;
+  width: 970px;
+  max-width: 100%; }
 
-
-
-
-
+.App {
+  text-align: center;
+  background: #4A90E2;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3); }
