@@ -1,12 +1,14 @@
 const path = require('path');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     mode: 'production',
     context: path.join(__dirname, 'client_src'),
     entry: './index.js',
     output: {
-        filename: './bundle.js',
-        path: path.resolve(__dirname, 'public/scripts')
+        filename: './scripts/bundle.js', 
+        chunkFilename: "[id].js",
+        path: path.resolve(__dirname, 'public')
     },
     module: {
         rules: [
@@ -20,10 +22,23 @@ module.exports = {
                     }
                 }
             },
-            {
+            /*{
                 test:/\.css$/,
                 use:['style-loader','css-loader']
+            },*/ 
+            {
+                test:/\.(s*)css$/, 
+                use: ExtractTextPlugin.extract({ 
+                        fallback:'style-loader',
+                        use:['css-loader'],
+                    })
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin({
+            filename: './css/bundle.css',
+            allChunks: true
+        })
+    ]
 };

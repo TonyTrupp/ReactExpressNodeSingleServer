@@ -1,12 +1,12 @@
-var http = require('http');
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var debug = require('debug')('weather-app:startup');
-
-var indexRouter = require('./routes/index'); 
+var http = require('http'),
+    createError = require('http-errors'),
+    express = require('express'),
+    path = require('path'),
+    cookieParser = require('cookie-parser'),
+    logger = require('morgan'),
+    debug = require('debug')('weather-app:startup'),
+    indexRouter = require('./routes/index'),
+    APIRouter = require('./routes/api/index'); 
 
 var app = express();
 
@@ -23,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.use('/', indexRouter);
+app.use('/api', APIRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
